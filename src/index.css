@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Syne", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #0D5C63;
+  --color-primary-dark: #0A4A4F;
+  --color-secondary: #F7F9F8;
+  --color-accent: #F0A500;
+  --color-accent-hover: #D99500;
+  --color-dark: #1A1A2E;
+  --color-border: #E0E8E6;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-dark bg-secondary antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-dark;
+  }
+}
+
+@layer utilities {
+  .bg-mesh {
+    background-color: #F7F9F8;
+    background-image: radial-gradient(at 0% 0%, hsla(185,76%,22%,0.1) 0px, transparent 50%),
+                      radial-gradient(at 100% 100%, hsla(185,76%,22%,0.05) 0px, transparent 50%);
+  }
+}
