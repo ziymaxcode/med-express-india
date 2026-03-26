@@ -11,6 +11,13 @@
   --color-accent-hover: #D99500;
   --color-dark: #1A1A2E;
   --color-border: #E0E8E6;
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 12px)); } /* 12px accounts for half the gap */
+  }
 }
 
 @layer base {

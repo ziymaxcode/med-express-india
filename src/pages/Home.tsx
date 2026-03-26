@@ -172,10 +172,14 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto pb-8 -mx-4 px-4 snap-x snap-mandatory hide-scrollbar gap-6">
-            {featuredProducts.map((product) => (
-              <div key={product.id} className="min-w-[280px] sm:min-w-[320px] snap-start group bg-white border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div className="relative w-full overflow-hidden pb-8">
+          {/* Gradient masks for smooth edges */}
+          <div className="absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          
+          <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-4">
+            {[...featuredProducts, ...featuredProducts].map((product, index) => (
+              <div key={`${product.id}-${index}`} className="w-[280px] sm:w-[320px] shrink-0 group bg-white border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
                 <div className="relative h-48 bg-secondary p-4 flex items-center justify-center overflow-hidden">
                   <img
                     src={product.image}
@@ -207,11 +211,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="mt-6 text-center md:hidden">
-            <Link to="/products" className="inline-flex items-center text-primary font-medium hover:text-accent transition-colors">
-              View Full Catalog <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </div>
+        </div>
+        <div className="mt-2 text-center md:hidden">
+          <Link to="/products" className="inline-flex items-center text-primary font-medium hover:text-accent transition-colors">
+            View Full Catalog <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
         </div>
       </section>
 

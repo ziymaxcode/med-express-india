@@ -1,7 +1,7 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "motion/react";
-import { Search, Filter, Phone } from "lucide-react";
+import { Search, Filter, Phone, X } from "lucide-react";
 import { CATEGORIES, PRODUCTS, WHATSAPP_LINK } from "../data";
 
 export default function Products() {
@@ -11,6 +11,32 @@ export default function Products() {
 
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [searchQuery, setSearchQuery] = useState("");
+  const [showFilters, setShowFilters] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Always show at the top of the page
+      if (currentScrollY < 100) {
+        setShowFilters(true);
+      } 
+      // Hide when scrolling down (with a small threshold to prevent jitter)
+      else if (currentScrollY > lastScrollY.current + 15) {
+        setShowFilters(false);
+      } 
+      // Show when scrolling up (with a small threshold)
+      else if (currentScrollY < lastScrollY.current - 15) {
+        setShowFilters(true);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
@@ -25,22 +51,20 @@ export default function Products() {
     <div className="pt-24 pb-20 bg-secondary min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="mb-12 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">Product Catalog</h1>
-          <p className="text-lg text-dark/70 max-w-2xl">
-            Browse our comprehensive range of wholesale medical supplies. Contact us for bulk pricing and availability.
-          </p>
-        </div>
-
-        {/* Filters & Search */}
-        <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-border mb-12 flex flex-col md:flex-row gap-6 items-center justify-between sticky top-24 z-30">
+        {/* Filters & Search - Moved above header */}
+        <div 
+          className={`bg-white p-4 md:p-6 rounded-xl shadow-sm border border-border mb-10 flex flex-col md:flex-row gap-6 items-center justify-between sticky z-30 transition-all duration-500 ${
+            showFilters 
+              ? "top-24 opacity-100 translate-y-0" 
+              : "top-24 opacity-0 -translate-y-8 pointer-events-none"
+          }`}
+        >
           
-          {/* Category Pills */}
-          <div className="flex overflow-x-auto w-full md:w-auto pb-2 md:pb-0 hide-scrollbar gap-2">
+          {/* Category Pills - Wrapping instead of scrolling */}
+          <div className="flex flex-wrap justify-center md:justify-start w-full md:w-auto gap-2">
             <button
               onClick={() => setActiveCategory("all")}
-              className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === "all"
                   ? "bg-primary text-white shadow-md"
                   : "bg-secondary text-dark/70 hover:bg-border hover:text-dark"
@@ -52,7 +76,7 @@ export default function Products() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
                   activeCategory === cat.id
                     ? "bg-primary text-white shadow-md"
                     : "bg-secondary text-dark/70 hover:bg-border hover:text-dark"
@@ -64,18 +88,35 @@ export default function Products() {
           </div>
 
           {/* Search Bar */}
-          <div className="relative w-full md:w-72 shrink-0">
+          <div className="relative w-full md:w-72 shrink-0 group transition-all duration-300 focus-within:md:w-80">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-dark/40" />
+              <Search className="h-5 w-5 text-dark/40 group-focus-within:text-primary transition-colors" />
             </div>
             <input
               type="text"
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="block w-full pl-10 pr-3 py-2.5 border border-border rounded-lg leading-5 bg-secondary placeholder-dark/40 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors sm:text-sm"
+              className="block w-full pl-10 pr-10 py-2.5 border border-border rounded-lg leading-5 bg-secondary/50 hover:bg-white placeholder-dark/40 focus:bg-white focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all sm:text-sm shadow-sm"
             />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-dark/40 hover:text-dark transition-colors"
+                aria-label="Clear search"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
           </div>
+        </div>
+
+        {/* Header */}
+        <div className="mb-10 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-dark mb-4">Product Catalog</h1>
+          <p className="text-lg text-dark/70 max-w-2xl">
+            Browse our comprehensive range of wholesale medical supplies. Contact us for bulk pricing and availability.
+          </p>
         </div>
 
         {/* Product Grid */}
