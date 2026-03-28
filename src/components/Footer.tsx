@@ -14,7 +14,7 @@ export default function Footer() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-md font-medium transition-colors text-lg shadow-lg"
+          className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-md font-medium transition-colors text-lg shadow-lg"
         >
           <Phone className="w-5 h-5" />
           WhatsApp Us Now
