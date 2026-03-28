@@ -78,7 +78,7 @@ export default function Home() {
               <div className="text-sm md:text-base font-medium opacity-90">Products</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="px-4">
-              <div className="text-3xl md:text-4xl font-heading font-bold text-accent mb-2">11,600+</div>
+              <div className="text-3xl md:text-4xl font-heading font-bold text-accent mb-2">1000+</div>
               <div className="text-sm md:text-base font-medium opacity-90">B2B Clients Served</div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="px-4">
