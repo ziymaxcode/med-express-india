@@ -38,11 +38,16 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <span className="font-heading font-bold text-2xl text-primary tracking-tight">
-                Med Express India
-              </span>
-            </Link>
+           <Link to="/" className="flex items-center gap-2">
+                  <img
+                    src="/meilogo.jpg"
+                    alt="Med Express India Logo"
+                    className="h-8 sm:h-10 w-auto"
+                  />
+                  <span className="font-heading font-bold text-lg sm:text-2xl text-primary tracking-tight">
+                    {/* Med Express India */}
+                  </span>
+                </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8">
