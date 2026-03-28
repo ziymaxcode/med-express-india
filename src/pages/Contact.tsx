@@ -144,7 +144,9 @@ export default function Contact() {
             className="flex flex-col justify-between"
           >
             <div className="bg-primary text-white p-8 md:p-10 rounded-2xl shadow-lg mb-8">
-              <h2 className="text-2xl font-heading font-bold mb-8">Contact Information</h2>
+              <h2 className="text-2xl font-heading font-bold mb-8 text-white">
+                Contact Information
+              </h2>
               
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
@@ -152,7 +154,9 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-1">Head Office</h3>
+                    <h3 className="text-lg font-bold mb-1 text-blue-200">
+                        Head Office
+                      </h3>
                     <p className="text-white/80 leading-relaxed">
                       Lulu Center, Falnir Road<br />
                       Mangalore, Karnataka 575001
@@ -165,7 +169,7 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-1">Direct Sales (WhatsApp)</h3>
+                    <h3 className="text-lg font-bold mb-1 text-blue-200">Direct Sales (WhatsApp)</h3>
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-accent transition-colors">
                       +91 98765 43210
                     </a>
@@ -177,7 +181,7 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-1">Email</h3>
+                    <h3 className="text-lg font-bold mb-1 text-blue-200">Email</h3>
                     <a href="mailto:info@medexpressindia.com" className="text-white/80 hover:text-accent transition-colors">
                       info@medexpressindia.com
                     </a>
@@ -189,7 +193,7 @@ export default function Contact() {
                     <Clock className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-1">Working Hours</h3>
+                    <h3 className="text-lg font-bold mb-1 text-blue-200">Working Hours</h3>
                     <p className="text-white/80">
                       Monday – Saturday<br />
                       9:00 AM – 6:00 PM IST

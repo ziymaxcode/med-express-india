@@ -124,10 +124,12 @@ export default function Compliance() {
               viewport={{ once: true }}
               className="bg-primary text-white p-8 rounded-2xl shadow-lg sticky top-32"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <Search className="w-6 h-6 text-accent" />
-                <h3 className="text-xl font-heading font-bold">HSN Codes We Deal In</h3>
-              </div>
+             <div className="flex items-center gap-3 mb-6">
+              <Search className="w-6 h-6 text-white" />
+              <h3 className="text-xl font-heading font-bold text-blue-200">
+                HSN Codes We Deal In
+              </h3>
+            </div>
               
               <p className="text-white/80 text-sm mb-8 leading-relaxed">
                 For precise billing and taxation, we categorize our inventory under the following primary Harmonized System of Nomenclature (HSN) codes:
