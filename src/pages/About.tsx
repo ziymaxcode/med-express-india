@@ -60,20 +60,21 @@ export default function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-2xl transform -rotate-3 scale-105"></div>
-              <img
-                src="https://images.unsplash.com/photo-1587559070757-f72a388edbba?auto=format&fit=crop&q=80&w=800&h=600"
-                alt="Medical Warehouse"
-                className="relative rounded-2xl shadow-2xl object-cover w-full h-[500px]"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="relative"
+>
+  <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-2xl transform -rotate-3 scale-105"></div>
+
+  <img
+    src="/medfavicon2.jpg"
+    alt="Medical Warehouse"
+    className="relative rounded-2xl shadow-2xl object-contain w-full h-[500px]"
+    referrerPolicy="no-referrer"
+  />
+</motion.div>
           </div>
         </div>
       </section>
@@ -86,7 +87,7 @@ export default function About() {
             <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center text-primary">
               <Users className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-heading font-bold text-dark mb-2">Mr. Ifthikar Ahmed</h3>
+            <h3 className="text-2xl font-heading font-bold text-dark mb-2">Mr. Ifthikar Ahmed H.B.K.</h3>
             <p className="text-primary font-medium mb-4">Founder & Managing Director</p>
             <p className="text-dark/70 leading-relaxed">
               With over a decade of experience in medical logistics, Mr. Ahmed leads Med Express India with a focus on ethical trade, transparency, and building long-term partnerships with healthcare providers.

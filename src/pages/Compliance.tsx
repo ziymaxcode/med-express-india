@@ -60,7 +60,7 @@ export default function Compliance() {
                   <h3 className="text-lg font-bold text-dark mb-2">Drug License</h3>
                   <p className="text-dark/70 mb-4 text-sm flex-grow">Authorized wholesale drug license for the distribution of pharmaceutical products.</p>
                   <div className="font-mono text-primary font-medium bg-white px-4 py-2 rounded border border-border inline-block mb-6 w-fit">
-                    KA-MN2-216760 KA-MN2-216761
+                    KA-MN2-216760 <br/>KA-MN2-216761
                   </div>
                   
                   {/* <button className="flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors mt-auto">

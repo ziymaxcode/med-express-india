@@ -55,9 +55,9 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl transform rotate-3 scale-105"></div>
               <img
-                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800&h=600"
+                src="/medfavicon2.jpg"
                 alt="Medical Supplies Packaging"
-                className="relative rounded-2xl shadow-2xl object-cover w-full h-[500px]"
+                 className="relative rounded-2xl shadow-2xl object-contain w-full h-[500px]"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
