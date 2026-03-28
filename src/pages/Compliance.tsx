@@ -33,27 +33,39 @@ export default function Compliance() {
                 <h2 className="text-2xl md:text-3xl font-heading font-bold text-dark">Registrations</h2>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-6 bg-secondary rounded-xl border border-border">
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-6 bg-secondary rounded-xl border border-border flex flex-col h-full">
                   <h3 className="text-lg font-bold text-dark mb-2">GST Registration</h3>
-                  <p className="text-dark/70 mb-4 text-sm">Goods and Services Tax Identification Number for seamless B2B transactions across India.</p>
-                  <div className="font-mono text-primary font-medium bg-white px-4 py-2 rounded border border-border inline-block mb-6">
-                    29XXXXX1234X1Z5
+                  <p className="text-dark/70 mb-4 text-sm flex-grow">Goods and Services Tax Identification Number for seamless B2B transactions across India.</p>
+                  <div className="font-mono text-primary font-medium bg-white px-4 py-2 rounded border border-border inline-block mb-6 w-fit">
+                    29EQLPB7536P1Z0
                   </div>
-                  <button className="flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors">
+                  {/* <button className="flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors mt-auto">
                     <Download className="w-4 h-4" /> Download Certificate
-                  </button>
+                  </button> */}
                 </div>
 
-                <div className="p-6 bg-secondary rounded-xl border border-border">
+                <div className="p-6 bg-secondary rounded-xl border border-border flex flex-col h-full">
                   <h3 className="text-lg font-bold text-dark mb-2">IEC Certification</h3>
-                  <p className="text-dark/70 mb-4 text-sm">Import Export Code issued by DGFT, enabling us to source globally and supply locally.</p>
-                  <div className="font-mono text-primary font-medium bg-white px-4 py-2 rounded border border-border inline-block mb-6">
+                  <p className="text-dark/70 mb-4 text-sm flex-grow">Import Export Code issued by DGFT, enabling us to source globally and supply locally.</p>
+                  <div className="font-mono text-primary font-medium bg-white px-4 py-2 rounded border border-border inline-block mb-6 w-fit">
                     0123456789
                   </div>
-                  <button className="flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors">
+                  {/* <button className="flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors mt-auto">
                     <Download className="w-4 h-4" /> Download Certificate
-                  </button>
+                  </button> */}
+                </div>
+
+                <div className="p-6 bg-secondary rounded-xl border border-border flex flex-col h-full">
+                  <h3 className="text-lg font-bold text-dark mb-2">Drug License</h3>
+                  <p className="text-dark/70 mb-4 text-sm flex-grow">Authorized wholesale drug license for the distribution of pharmaceutical products.</p>
+                  <div className="font-mono text-primary font-medium bg-white px-4 py-2 rounded border border-border inline-block mb-6 w-fit">
+                    KA-MN2-216760 KA-MN2-216761
+                  </div>
+                  
+                  {/* <button className="flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors mt-auto">
+                    <Download className="w-4 h-4" /> Download License
+                  </button> */}
                 </div>
               </div>
             </motion.section>
@@ -124,12 +136,12 @@ export default function Compliance() {
               viewport={{ once: true }}
               className="bg-primary text-white p-8 rounded-2xl shadow-lg sticky top-32"
             >
-             <div className="flex items-center gap-3 mb-6">
-              <Search className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-heading font-bold text-blue-200">
+              <div className="flex items-center gap-3 mb-6">
+                <Search className="w-6 h-6 text-accent" />
+                 <h3 className="text-xl font-heading font-bold text-blue-200">
                 HSN Codes We Deal In
               </h3>
-            </div>
+              </div>
               
               <p className="text-white/80 text-sm mb-8 leading-relaxed">
                 For precise billing and taxation, we categorize our inventory under the following primary Harmonized System of Nomenclature (HSN) codes:

@@ -21,7 +21,7 @@ export default function Contact() {
     // Simulate form submission or redirect to WhatsApp
     const text = `Hi, I am ${formData.name} from ${formData.organization}. I am interested in ${formData.productInterest}. ${formData.message}`;
     const encodedText = encodeURIComponent(text);
-    window.open(`https://wa.me/919876543210?text=${encodedText}`, "_blank");
+    window.open(`https://wa.me/919902509955?text=${encodedText}`, "_blank");
   };
 
   return (
@@ -59,7 +59,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-secondary focus:bg-white focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors outline-none"
-                    placeholder="John Doe"
+                    placeholder=""
                   />
                 </div>
                 <div>
@@ -72,7 +72,7 @@ export default function Contact() {
                     value={formData.organization}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-secondary focus:bg-white focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors outline-none"
-                    placeholder="City Hospital"
+                    placeholder=""
                   />
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-secondary focus:bg-white focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors outline-none"
-                    placeholder="+91 98765 43210"
+                    placeholder=""
                   />
                 </div>
                 <div>
@@ -158,8 +158,9 @@ export default function Contact() {
                         Head Office
                       </h3>
                     <p className="text-white/80 leading-relaxed">
-                      Lulu Center, Falnir Road<br />
-                      Mangalore, Karnataka 575001
+                     3-28/2-14, 15, 16, Kausthuba, 1st Floor,<br/>
+                    Near Raktheshwari Temple, Malemar Road,<br/>
+                    Kottara Chowki, Mangaluru - 575 006
                     </p>
                   </div>
                 </div>
@@ -171,7 +172,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-bold mb-1 text-blue-200">Direct Sales (WhatsApp)</h3>
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-accent transition-colors">
-                      +91 98765 43210
+                      +91 99025 09955
                     </a>
                   </div>
                 </div>
@@ -206,11 +207,17 @@ export default function Contact() {
             {/* Map Placeholder */}
             <div className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden h-64 relative">
               {/* In a real app, embed Google Maps iframe here */}
-              <div className="absolute inset-0 bg-secondary flex flex-col items-center justify-center text-dark/40 p-6 text-center">
-                <MapPin className="w-12 h-12 mb-4 opacity-50" />
-                <p className="font-medium">Google Maps Embed</p>
-                <p className="text-sm">Lulu Center, Falnir Road, Mangalore</p>
-              </div>
+              <div className="w-full h-[400px] rounded-xl overflow-hidden">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2962.3258483113523!2d74.8424059!3d12.907583700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a7651c4fdd9%3A0x72fc0bdd8b5013d2!2sMED%20EXPRESS%20INDIA!5e1!3m2!1sen!2sin!4v1774679552400!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
             </div>
           </motion.div>
 

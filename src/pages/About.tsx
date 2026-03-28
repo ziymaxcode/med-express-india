@@ -87,7 +87,7 @@ export default function About() {
               <Users className="w-10 h-10" />
             </div>
             <h3 className="text-2xl font-heading font-bold text-dark mb-2">Mr. Ifthikar Ahmed</h3>
-            <p className="text-primary font-medium mb-4">Founder & Director</p>
+            <p className="text-primary font-medium mb-4">Founder & Managing Director</p>
             <p className="text-dark/70 leading-relaxed">
               With over a decade of experience in medical logistics, Mr. Ahmed leads Med Express India with a focus on ethical trade, transparency, and building long-term partnerships with healthcare providers.
             </p>
@@ -135,17 +135,19 @@ export default function About() {
             <p className="text-lg text-dark/70 max-w-2xl mx-auto">Strategically located in Mangalore to serve Karnataka efficiently.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="flex justify-center">
             <div className="bg-white p-8 rounded-xl border border-border shadow-sm flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xl font-heading font-bold text-dark mb-2">Head Office</h3>
-                <p className="text-dark/70 leading-relaxed">Lulu Center, Falnir Road<br />Mangalore, Karnataka 575001</p>
+                <h3 className="text-xl font-heading font-bold text-dark mb-2">Head Office & Warehouse</h3>
+                <p className="text-dark/70 leading-relaxed">3-28/2-14, 15, 16, Kausthuba, 1st Floor,<br/>
+                    Near Raktheshwari Temple, Malemar Road,<br/>
+                    Kottara Chowki, Mangaluru - 575 006</p>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-xl border border-border shadow-sm flex items-start gap-4">
+            {/* <div className="bg-white p-8 rounded-xl border border-border shadow-sm flex items-start gap-4">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                 <Building2 className="w-6 h-6" />
               </div>
@@ -153,7 +155,7 @@ export default function About() {
                 <h3 className="text-xl font-heading font-bold text-dark mb-2">Warehouse</h3>
                 <p className="text-dark/70 leading-relaxed">Kottara Chowki<br />Mangalore, Karnataka 575006</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

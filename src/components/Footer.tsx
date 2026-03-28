@@ -86,14 +86,25 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span>Lulu Center, Falnir Road & Kottara Chowki, Mangalore, Karnataka 575001</span>
+                <span>3-28/2-14, 15, 16, Kausthuba, 1st Floor, Near Raktheshwari Temple, Malemar Road, Kottara Chowki, Mangaluru - 575 006</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                  +91 98765 43210
+                  +91 99025 09955
                 </a>
               </li>
+              <li className="flex items-center gap-3">
+  <Phone className="w-5 h-5 text-accent shrink-0" />
+  <div className="flex flex-col text-base">
+  <a href="tel:+918243566230" className="hover:text-accent transition-colors">
+    0824-3566230
+  </a>
+  <a href="tel:+918242430055" className="hover:text-accent transition-colors">
+    0824-2430055
+  </a>
+</div>
+</li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a href="mailto:info@medexpressindia.com" className="hover:text-accent transition-colors">
