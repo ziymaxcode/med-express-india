@@ -43,7 +43,7 @@ export default function About() {
                 Founded in Mangalore, Med Express India has grown to become a cornerstone of Karnataka's healthcare supply chain. For over a decade, we have been the silent engine powering hospitals, clinics, and pharmacies with essential medical supplies.
               </p>
               <p className="text-lg text-dark/80 leading-relaxed mb-8">
-                Our journey began with a simple commitment: to provide affordable, high-quality medical supplies without compromising on ethical business practices. Today, we serve over 11,600 B2B clients across the state.
+                Our journey began with a simple commitment: to provide affordable, high-quality medical supplies without compromising on ethical business practices. Today, we serve over 1000+ B2B clients across the state.
               </p>
 
               <div className="bg-white p-6 rounded-xl border border-border shadow-sm">
@@ -60,21 +60,19 @@ export default function About() {
             </motion.div>
 
             <motion.div
-  initial={{ opacity: 0, scale: 0.95 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8 }}
-  className="relative"
->
-  <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-2xl transform -rotate-3 scale-105"></div>
-
-  <img
-    src="/medfavicon2.jpg"
-    alt="Medical Warehouse"
-    className="relative rounded-2xl shadow-2xl object-contain w-full h-[500px]"
-    referrerPolicy="no-referrer"
-  />
-</motion.div>
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl transform rotate-3 scale-105"></div>
+              <img
+                src="/medfavicon2.jpg"
+                alt="Medical Supplies Packaging"
+                 className="relative rounded-2xl shadow-2xl object-contain w-full h-[500px]"
+                referrerPolicy="no-referrer"
+              />
+            </motion.div>
           </div>
         </div>
       </section>

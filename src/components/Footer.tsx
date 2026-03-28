@@ -25,10 +25,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link to="/" className="inline-block">
-              <span className="font-heading font-bold text-2xl text-white tracking-tight">
-                Med Express India
-              </span>
+           <Link to="/" className="inline-flex items-center justify-center">
+              <img 
+                src="/meilogo.jpg"
+                alt="Med Express India"
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm leading-relaxed">
               Your Trusted Partner in Healthcare Supply. Wholesale distributor of PPE, hospital consumables, and pharmaceuticals based in Mangalore, Karnataka.
@@ -115,10 +117,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 text-center text-sm text-white/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Med Express India. All rights reserved.</p>
-          <p>Designed for B2B Wholesale Distribution.</p>
-        </div>
+        <div className="mt-16 pt-8 border-t border-white/10 text-center text-sm text-white/50 flex flex-col items-center justify-center gap-4">
+  <p>© {new Date().getFullYear()} Med Express India. All rights reserved.</p>
+  {/* <p>Designed for B2B Wholesale Distribution.</p> */}
+</div>
       </div>
     </footer>
   );

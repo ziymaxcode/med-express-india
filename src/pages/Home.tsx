@@ -133,7 +133,7 @@ export default function Home() {
               { icon: Truck, title: "On-Time Delivery", desc: "We understand hospital procurement timelines. Reliable logistics across Karnataka." },
               { icon: CheckCircle2, title: "Verified & Certified", desc: "GST registered, IEC certified, ethically sourced products you can trust." },
               { icon: DollarSign, title: "Bulk Pricing", desc: "Competitive wholesale rates with flexible payment modes for regular partners." },
-              { icon: MapPin, title: "Local Roots", desc: "Based in Mangalore (Falnir & Kottara Chowki), serving Karnataka since 2014." },
+              { icon: MapPin, title: "Local Roots", desc: "Based in Mangalore, serving Karnataka since 2016." },
               { icon: MessageCircle, title: "WhatsApp-First", desc: "Quick responses, faster orders. Direct line to our sales team." },
               { icon: Package, title: "Wide Product Range", desc: "From N95s to antibiotics — one reliable partner for all your needs." },
             ].map((feature, idx) => (
