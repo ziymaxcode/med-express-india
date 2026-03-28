@@ -66,7 +66,7 @@ export default function Navbar() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-5 py-2.5 rounded-md font-medium transition-colors shadow-sm"
+                className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-5 py-2.5 rounded-md font-medium transition-colors shadow-sm"
               >
                 <Phone className="w-4 h-4" />
                 WhatsApp Us
@@ -126,7 +126,7 @@ export default function Navbar() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover transition-colors text-white px-5 py-3 rounded-xl font-medium w-full shadow-md"
+                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] transition-colors text-white px-5 py-3 rounded-xl font-medium w-full shadow-md"
               >
                 <Phone className="w-5 h-5" />
                 WhatsApp Us

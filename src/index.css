@@ -4,13 +4,14 @@
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Syne", ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary: #0D5C63;
-  --color-primary-dark: #0A4A4F;
-  --color-secondary: #F7F9F8;
-  --color-accent: #F0A500;
-  --color-accent-hover: #D99500;
-  --color-dark: #1A1A2E;
-  --color-border: #E0E8E6;
+  /* Updated to match MED EXPRESS INDIA logo (Navy Blue & Black) */
+  --color-primary: #2E3192;
+  --color-primary-dark: #1E2060;
+  --color-secondary: #F8F9FA;
+  --color-accent: #3B82F6;
+  --color-accent-hover: #2563EB;
+  --color-dark: #111827;
+  --color-border: #E5E7EB;
 
   --animate-marquee: marquee 40s linear infinite;
 
@@ -31,8 +32,8 @@
 
 @layer utilities {
   .bg-mesh {
-    background-color: #F7F9F8;
-    background-image: radial-gradient(at 0% 0%, hsla(185,76%,22%,0.1) 0px, transparent 50%),
-                      radial-gradient(at 100% 100%, hsla(185,76%,22%,0.05) 0px, transparent 50%);
+    background-color: #F8F9FA;
+    background-image: radial-gradient(at 0% 0%, hsla(238, 52%, 38%, 0.08) 0px, transparent 50%),
+                      radial-gradient(at 100% 100%, hsla(238, 52%, 38%, 0.04) 0px, transparent 50%);
   }
 }
